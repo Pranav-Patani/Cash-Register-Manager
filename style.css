@@ -1,18 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700;800&display=swap");
+
 /**Basic Setup**/
 
 :root {
   --primary-color: #0891b2;
   --text-color-light: #ecfeff;
+  --heading-light: #cffafe;
   --gradient-light: #06b6d4;
   --gradient-dark: var(--primary-color);
+  --button-color: #0891b2;
 }
 
 body {
+  font-family: "Overpass", sans-serif;
   margin: 0;
   padding: 0;
   text-rendering: optimizeLegibility;
   box-sizing: border-box;
   background-color: #06b6d4;
+  font-size: 18px;
+  line-height: 150%;
+  text-align: center;
 }
 
 /**Header**/
@@ -28,7 +36,7 @@ body {
   border-bottom-right-radius: 1rem;
 }
 
-/**Main**/
+/**Cash Calculator**/
 
 .cash-calc-container {
   background-image: linear-gradient(
@@ -38,6 +46,69 @@ body {
   margin: 4rem auto;
   width: 50%;
   border-radius: 2rem;
+  text-align: center;
+  padding: 1.5rem;
+  color: var(--text-color-light);
+}
+
+.cash-calc-container h2 {
+  color: var(--heading-light);
+  font-weight: bolder;
+}
+
+/*Input Area*/
+
+.input-area {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-heading {
+  font-size: 21px;
+  font-weight: bolder;
+}
+
+.input-field {
+  margin: 0.5rem auto;
+  width: 30%;
+  padding: 0.75rem;
+  border: 2px solid var(--primary-color);
+  border-radius: 1rem;
+  outline: #fff;
+}
+
+.button {
+  width: 15%;
+  border: 2px solid var(--primary-color);
+  border-radius: 1rem;
+  padding: 0.8rem 1rem;
+  margin: 1rem auto;
+  background-color: var(--button-color);
+  color: var(--text-color-light);
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/*Currency Table*/
+
+caption {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.currency-table {
+  border-collapse: collapse;
+  width: 50%;
+  text-align: justify;
+  margin: 1rem auto;
+}
+
+.currency-table th,
+td {
+  border: 3px solid #0e7490;
+  width: 0%;
+  padding: 0.5rem 1rem;
 }
 
 /**Footer**/
@@ -51,4 +122,9 @@ body {
   color: var(--text-color-light);
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
+}
+
+.footer p {
+  width: 60%;
+  margin: auto;
 }

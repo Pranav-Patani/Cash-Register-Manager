@@ -1,23 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cash Register</title>
-    <link rel="stylesheet" href="/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
     <header class="hero">
-        <h1>Welcome to Cash Register Manager!</h1>
+      <h1>Welcome to Cash Register Manager!</h1>
     </header>
 
     <div class="cash-calc-container">
+      <h2>Cash Calculator</h2>
+      <p>
+        Enter the bill amount and cash given by the customer and know minimum
+        number of notes to return.
+      </p>
+      <div class="input-area">
+        <label class="input-heading" for="bill-amount">Bill Amount</label>
+        <input class="input-field" type="number" />
 
+        <label class="input-heading" for="cash-given">Cash Given</label>
+        <input class="input-field" type="number" />
+
+        <button class="button">Check</button>
+      </div>
+
+      <div class="output-table">
+        <table class="currency-table">
+          <caption>
+            Return Change
+          </caption>
+          <tbody>
+            <tr>
+              <th>Notes Required</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <th>Note Type</th>
+              <td>2000</td>
+              <td>500</td>
+              <td>100</td>
+              <td>50</td>
+              <td>20</td>
+              <td>10</td>
+              <td>5</td>
+              <td>1</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
     <footer class="footer">
-        <h4>About</h4>
-        <p>It's very simple to use this cash register manager. You just need to input the bill amount and the amount of cash given and you will receive the output with the amount you need to return and the minimum number of notes required!</p>
+      <h3>About</h3>
+      <p>
+        This web-app is a cash register manager. You just need to
+        input the bill amount and the amount of cash given and you will receive
+        the output with the amount you need to return and the minimum number of
+        notes required!
+      </p>
     </footer>
-</body>
+  </body>
 </html>
