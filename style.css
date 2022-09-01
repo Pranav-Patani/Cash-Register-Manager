@@ -1,0 +1,54 @@
+/**Basic Setup**/
+
+:root {
+  --primary-color: #0891b2;
+  --text-color-light: #ecfeff;
+  --gradient-light: #06b6d4;
+  --gradient-dark: var(--primary-color);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  text-rendering: optimizeLegibility;
+  box-sizing: border-box;
+  background-color: #06b6d4;
+}
+
+/**Header**/
+
+.hero {
+  background-image: linear-gradient(
+    var(--gradient-light),
+    var(--gradient-dark)
+  );
+  padding: 2rem;
+  color: var(--text-color-light);
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+/**Main**/
+
+.cash-calc-container {
+  background-image: linear-gradient(
+    var(--gradient-dark),
+    var(--gradient-light)
+  );
+  margin: 4rem auto;
+  width: 50%;
+  border-radius: 2rem;
+}
+
+/**Footer**/
+
+.footer {
+  background-image: linear-gradient(
+    var(--gradient-dark),
+    var(--gradient-light)
+  );
+  padding: 1.5rem;
+  color: var(--text-color-light);
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
