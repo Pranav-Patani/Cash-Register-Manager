@@ -20,12 +20,14 @@
       </p>
       <div class="input-area">
         <label class="input-heading" for="bill-amount">Bill Amount</label>
-        <input class="input-field" type="number" />
+        <input placeholder="Enter Bill Amount" class="bill-input input-field" type="number" />
 
         <label class="input-heading" for="cash-given">Cash Given</label>
-        <input class="input-field" type="number" />
+        <input placeHolder="Enter Cash Given" class="cash-input input-field" type="number" />
 
         <button class="button">Check</button>
+        <p class="error-message"></p>
+        <p class="message"></p>
       </div>
 
       <div class="output-table">
@@ -36,14 +38,14 @@
           <tbody>
             <tr>
               <th>Notes Required</th>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
+              <td class="notes-required"></td>
+              <td class="notes-required"></td>
+              <td class="notes-required"></td>
+              <td class="notes-required"></td>
+              <td class="notes-required"></td>
+              <td class="notes-required"></td>
+              <td class="notes-required"></td>
+              <td class="notes-required"></td>
             </tr>
 
             <tr>
@@ -64,11 +66,12 @@
     <footer class="footer">
       <h3>About</h3>
       <p>
-        This web-app is a cash register manager. You just need to
-        input the bill amount and the amount of cash given and you will receive
-        the output with the amount you need to return and the minimum number of
-        notes required!
+        This web-app is a cash register manager. You just need to input the bill
+        amount and the amount of cash given and you will receive the output with
+        the amount you need to return and the minimum number of notes required!
       </p>
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
