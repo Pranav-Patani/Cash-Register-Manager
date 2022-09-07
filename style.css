@@ -20,7 +20,7 @@ body {
   box-sizing: border-box;
   background-color: #06b6d4;
   font-size: 18px;
-  line-height: 150%;
+  line-height: 1.7;
   text-align: center;
 }
 
@@ -37,22 +37,39 @@ body {
   border-bottom-right-radius: 1rem;
 }
 
+@media only screen and (max-width: 667px){
+  h1 {
+    font-size: 28px;
+  }
+}
+
+@media only screen and (max-width: 498px){
+  h1 {
+    font-size: 26px;
+  }
+}
+
 /**Cash Calculator**/
 
 .cash-calc-container {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   background-image: linear-gradient(
     var(--gradient-dark),
     var(--gradient-light)
   );
   margin: 4rem auto;
-  width: 50%;
+  width: 60%;
   border-radius: 2rem;
   text-align: center;
   padding: 1.5rem;
   color: var(--text-color-light);
+}
+
+@media only screen and (max-width: 900px){
+  .cash-calc-container {
+    width: 70%;
+  }
 }
 
 .cash-calc-container h2 {
@@ -82,11 +99,16 @@ body {
   outline: #fff;
 }
 
+@media only screen and (max-width: 400px){
+  .input-field {
+    width: 40%;
+  }
+}
+
 .button {
-  width: 15%;
   border: 2px solid var(--primary-color);
   border-radius: 1rem;
-  padding: 0.8rem 1rem;
+  padding: 0.8rem 1.7rem;
   margin: 1rem auto;
   background-color: var(--button-color);
   color: var(--text-color-light);
@@ -114,17 +136,18 @@ caption {
 
 .currency-table {
   border-collapse: collapse;
-  width: 50%;
   text-align: justify;
   margin: 1rem auto;
+  width: 50%;
 }
 
 .currency-table th,
 td {
   border: 3px solid #0e7490;
-  width: 0%;
+  width: 10%;
   padding: 0.5rem 1rem;
 }
+
 
 /**Footer**/
 
@@ -142,4 +165,16 @@ td {
 .footer p {
   width: 60%;
   margin: auto;
+}
+
+@media only screen and (max-width: 900px){
+  .footer p {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 450px){
+  .footer p {
+    width: 90%;
+  }
 }
