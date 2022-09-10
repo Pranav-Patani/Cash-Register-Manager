@@ -5,6 +5,32 @@ const errorMessage = document.querySelector(`.error-message`);
 const message = document.querySelector(`.message`);
 const notesRequired = document.querySelectorAll(`.notes-required`);
 const notesAvailable = [2000, 500, 100, 50, 20, 10, 5, 1];
+const buttonNext = document.querySelector(`.next-button`);
+const billValidation = document.querySelector(`.bill-validation`);
+const cashLabel = document.querySelector(`.cash-label`);
+const currencyTable = document.querySelector(`.currency-table`);
+
+billValidation.style.display = "none";
+cashLabel.style.display = "none";
+cashInput.style.display = "none";
+button.style.display = "none";
+currencyTable.style.display = "none";
+
+function billValidator() {
+  const bill = Number(billInput.value);
+
+  if (bill < 0 || bill === 0) {
+    billValidation.style.display = "block";
+    billValidation.style.color = "red";
+    billValidation.innerText = `Invalid Bill Amount! The bill amount must be greater than 0!`;
+  } else {
+    cashLabel.style.display = "block";
+    cashInput.style.display = "initial";
+    button.style.display = "initial";
+  }
+}
+
+buttonNext.addEventListener("click", billValidator);
 
 function clickValidator() {
   hideMessage();
@@ -17,6 +43,7 @@ function clickValidator() {
     showErrorMessage(`Please fill both the values correctly`);
   } else if (bill > 0) {
     if (cash > bill) {
+      currencyTable.style.display = "table";
       const returnAmount = cash - bill;
       calculateChange(returnAmount);
       showMessage(`Amount to be returned: ${returnAmount}`);
