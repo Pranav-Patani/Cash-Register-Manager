@@ -22,4 +22,5 @@ After clicking on the check button, the **refund table** located below the check
 
 ![refund table working](images/workingTable.png)
 
+***
 #### LET THE APP DO THE MATH!
